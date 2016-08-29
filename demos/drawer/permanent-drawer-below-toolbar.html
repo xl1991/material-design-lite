@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2016 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MDL Drawer Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="../assets/material-design-lite.css.js" charset="utf-8"></script>
+    <style>
+    body, html {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      height: 100%;
+    }
+
+    .toolbar {
+      display: flex;
+      width: 100%;
+      height: 56px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+      background: #333;
+      color: #FFF;
+      align-items: center;
+      padding: 0 16px;
+      box-sizing: border-box;
+      z-index: 2;
+    }
+
+    @media (min-width: 600px) {
+      .toolbar {
+        height: 64px;
+      }
+    }
+
+    .content {
+      display: flex;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    main {
+      display: inline-block;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    .mdl-permanent-drawer p {
+      padding: 0 16px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar mdl-typography mdl-typography--title">Title</div>
+
+    <div class="content">
+      <nav class="mdl-permanent-drawer mdl-typography">
+        <div class="mdl-permanent-drawer__content">
+          <p tabindex="0">One</p>
+          <p tabindex="0">Two</p>
+          <p tabindex="0">Three</p>
+          <p tabindex="0">Four</p>
+        </div>
+        <div class="mdl-permanent-drawer__footer">
+          <p>These items</p>
+          <p>are fixed</p>
+          <p>to the bottom</p>
+        </div>
+      </nav>
+      <main>
+        <h1>Permanent Drawer</h1>
+        <p>It sits to the left of this content.</p>
+      </main>
+    </div>
+  </body>
+</html>
